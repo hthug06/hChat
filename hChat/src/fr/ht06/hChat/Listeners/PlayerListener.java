@@ -30,7 +30,7 @@ public class PlayerListener implements Listener {
             Bukkit.broadcastMessage(PlaceholderAPI.setPlaceholders(player,main.getConfig().getString("Player_Info") + msg ).replace("&", "§"));
         }
         else {
-            Bukkit.broadcastMessage(playerinfo + msg );
+            Bukkit.broadcastMessage(playerinfo + msg);
         }
 
     }

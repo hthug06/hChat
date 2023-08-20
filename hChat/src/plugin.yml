@@ -1,8 +1,11 @@
 name: hChat
 main: fr.ht06.hChat.Main
-version: 1.2
+version: 1.3
 author: ht06
 description: A plugin that allow you to change the prefix of any player, use API (like PlaceholderAPI) and more things...
 load: POSTWORLD
 depend:
   - PlaceholderAPI
+commands:
+  hChat:
+    description: Display some information of the Plugin.
