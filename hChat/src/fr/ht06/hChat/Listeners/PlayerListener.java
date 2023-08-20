@@ -24,9 +24,14 @@ public class PlayerListener implements Listener {
         String name = event.getPlayer().getName();
         event.setCancelled(true);
         String msg = event.getMessage();
-        String newmsg = msg.replace("&", "§");
-        String prefix = PlaceholderAPI.setPlaceholders(player,"").replace("&", "§");
-        Bukkit.broadcastMessage(PlaceholderAPI.setPlaceholders(player,main.getConfig().getString("Player_Info") + newmsg ).replace("&", "§"));
+        String playerinfo = PlaceholderAPI.setPlaceholders(player,main.getConfig().getString("Player_Info")).replace("&", "§");
+
+        if (player.hasPermission(main.getConfig().getString("ColorChat-Permission"))){
+            Bukkit.broadcastMessage(PlaceholderAPI.setPlaceholders(player,main.getConfig().getString("Player_Info") + msg ).replace("&", "§"));
+        }
+        else {
+            Bukkit.broadcastMessage(playerinfo + msg );
+        }
 
     }
 
