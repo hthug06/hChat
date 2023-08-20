@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact name="hChat:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/hChat_jar</output-path>
+    <root id="root">
+      <element id="archive" name="hChat.jar">
+        <element id="module-output" name="hChat" />
+      </element>
+    </root>
+  </artifact>
+</component>
