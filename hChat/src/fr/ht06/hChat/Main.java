@@ -10,7 +10,7 @@ public class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        saveConfig();
+        saveDefaultConfig();
         getCommand("hChat").setExecutor(new hChatCommand(this));
         getServer().getPluginManager().registerEvents(new PlayerListener(this),this); // this cible l'objet courant
     }

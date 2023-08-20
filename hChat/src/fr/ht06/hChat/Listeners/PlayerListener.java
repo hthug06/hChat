@@ -22,15 +22,20 @@ public class PlayerListener implements Listener {
     public void onTalk(PlayerChatEvent event){
         Player player = event.getPlayer();
         String name = event.getPlayer().getName();
-        event.setCancelled(true);
+
         String msg = event.getMessage();
         String playerinfo = PlaceholderAPI.setPlaceholders(player,main.getConfig().getString("Player_Info")).replace("&", "§");
 
-        if (player.hasPermission(main.getConfig().getString("ColorChat-Permission"))){
-            Bukkit.broadcastMessage(PlaceholderAPI.setPlaceholders(player,main.getConfig().getString("Player_Info") + msg ).replace("&", "§"));
-        }
-        else {
-            Bukkit.broadcastMessage(playerinfo + msg);
+        if (main.getConfig().getBoolean("Enable-plugin") == true){
+            event.setCancelled(true);
+            if (player.hasPermission(main.getConfig().getString("ColorChat-Permission"))){
+                Bukkit.broadcastMessage(PlaceholderAPI.setPlaceholders(player,main.getConfig().getString("Player_Info") + msg ).replace("&", "§"));
+            }
+            else {
+                Bukkit.broadcastMessage(playerinfo + msg);
+            }
+        }else {
+            event.setCancelled(false);
         }
 
     }
