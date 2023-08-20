@@ -1,3 +1,3 @@
 #This plugin require PlaceholderAPI, you can download it Here : https://www.spigotmc.org/resources/placeholderapi.6245/
 
-Message: "%player_name% : "
+Player_Info: "%luckperms_prefix% %player_name% %luckperms_suffix%: "
