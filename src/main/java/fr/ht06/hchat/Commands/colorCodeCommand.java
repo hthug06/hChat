@@ -44,7 +44,7 @@ public class colorCodeCommand implements CommandExecutor {
         else{
             if (command.getName().equalsIgnoreCase("colorcode")) {
                 String msg = main.getConfig().getString("message.no-permission");
-                Sender.sendMessage(msg.replace("&", "§"));
+                Sender.sendMessage(msg.replace("&", "§").replace("[PLAYER]", Sender.getName()));
             }
         }
 

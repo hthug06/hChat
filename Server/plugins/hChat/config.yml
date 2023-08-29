@@ -5,8 +5,8 @@
 Enable-plugin: true
 
 #Exemple with luckperm :
-#Player_Info: "%luckperms_prefix% %player_name% %luckperms_suffix%: "
-Player_Info: "%player_name%: "
+#Player-Info: "%luckperms_prefix% %player_name% %luckperms_suffix%: "
+Player-Info: "joueur: "
 
 #You can set a permission to use the Chat in color or have the default one
 permission:

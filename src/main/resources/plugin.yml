@@ -3,6 +3,7 @@ version: '${version}'
 main: fr.ht06.hchat.HChat
 api-version: '1.20'
 author: ht06
+softdepend: [PlaceholderAPI] # This is used, if your plugin works without PlaceholderAPI.
 commands:
   hChat:
     description: the credit of the plugin.
@@ -15,4 +16,3 @@ commands:
     aliases:
       - hcreload
       - hcrl
-  Test:

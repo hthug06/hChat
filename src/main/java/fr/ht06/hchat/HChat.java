@@ -1,6 +1,7 @@
 package fr.ht06.hchat;
 
 import fr.ht06.hchat.Commands.colorCodeCommand;
+import fr.ht06.hchat.Listeners.PlayerListener;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -14,7 +15,7 @@ public final class HChat extends JavaPlugin {
         getCommand("hChat").setExecutor(this);
         getCommand("colorcode").setExecutor(new colorCodeCommand(this));
         getCommand("hChatreload").setExecutor(this);
-        //getServer().getPluginManager().registerEvents(new PlayerListener(this),this); // this cible l'objet
+        getServer().getPluginManager().registerEvents(new PlayerListener(this),this); // this cible l'objet
 
 
     }
@@ -30,7 +31,7 @@ public final class HChat extends JavaPlugin {
 
         if (command.getName().equalsIgnoreCase("hChatreload")){
             if (!sender.hasPermission("permissions.ReloadConfig-Permission")){
-                sender.sendMessage(getConfig().getString("message.no-permission").replace("&", "§"));
+                sender.sendMessage(getConfig().getString("message.no-permission").replace("&", "§").replace("[PLAYER]", sender.getName()));
                 return true;
             }
 
