@@ -1,0 +1,18 @@
+name: hChat
+version: '${version}'
+main: fr.ht06.hchat.HChat
+api-version: '1.20'
+author: ht06
+commands:
+  hChat:
+    description: the credit of the plugin.
+
+  colorcode:
+    description: display the colorcode of Minecraft.
+
+  hChatreload:
+    description: reload config.yml of the plugin
+    aliases:
+      - hcreload
+      - hcrl
+
