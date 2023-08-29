@@ -9,6 +9,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerChatEvent;
+import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 
 public class PlayerListener implements Listener {
@@ -28,7 +29,7 @@ public class PlayerListener implements Listener {
 
         if (main.getConfig().getBoolean("Enable-plugin") == true){
             event.setCancelled(true);
-            if (player.hasPermission(main.getConfig().getString("ColorChat-Permission"))){
+            if (player.hasPermission(main.getConfig().getString("permission.ColorChat-Permission"))){
                 Bukkit.broadcastMessage(PlaceholderAPI.setPlaceholders(player,main.getConfig().getString("Player_Info") + msg ).replace("&", "§"));
             }
             else {

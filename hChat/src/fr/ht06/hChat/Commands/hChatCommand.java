@@ -16,7 +16,7 @@ public class hChatCommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String msg, String[] args) {
 
         if (cmd.getName().equalsIgnoreCase("hchat")){
-            sender.sendMessage("§6hChat v1.3 create by §cht06 !");
+            sender.sendMessage("§bhChat v1.5 create by §9§lht06");
         }
 
         return true;

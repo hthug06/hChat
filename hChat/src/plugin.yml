@@ -1,6 +1,6 @@
 name: hChat
 main: fr.ht06.hChat.Main
-version: 1.4
+version: 1.5
 author: ht06
 description: A plugin that allow you to change the prefix of any player, use API (like PlaceholderAPI) and more things...
 load: POSTWORLD
@@ -8,4 +8,13 @@ depend:
   - PlaceholderAPI
 commands:
   hChat:
-    description: Display some information of the Plugin.
+    description: the credit of the plugin.
+
+  colorcode:
+    description: display the colorcode of Minecraft.
+
+  hChatreload:
+    description: reload config.yml of the plugin
+    aliases:
+      - hcreload
+      - hcrl
