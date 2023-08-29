@@ -15,4 +15,4 @@ commands:
     aliases:
       - hcreload
       - hcrl
-
+  Test:
