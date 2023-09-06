@@ -20,10 +20,14 @@ public class muteCommand implements CommandExecutor {
 
         if (command.getName().equalsIgnoreCase("mute")){
             if (args.length == 0){
-                sender.sendMessage("§c/mute <player>");
+                sender.sendMessage("§c/mute <player> <Time>");
             }
 
-            if (args.length >= 1){
+            if (args.length == 1) {
+                sender.sendMessage("§c/mute <player> <Time>");
+            }
+
+            if (args.length == 2) {
                 String targetName = args[0];
 
                 //Pour vérifier si le joueur est en ligne ou pas
@@ -32,23 +36,12 @@ public class muteCommand implements CommandExecutor {
                     sender.sendMessage("Pas un joueur");
                 }
 
-                /*if (Bukkit.getPlayer(targetName) != null){  //si le joueur est en ligne
+                if (Bukkit.getPlayer(targetName) != null){  //si le joueur est en ligne
                     Integer time = Integer.valueOf(args[1]);
 
                     main.mutedPlayer.put(targetName, time);
 
-                    String foundKey = null;
-                    for (Map.Entry<String, Integer> entry : main.mutedPlayer.entrySet()) {
-                        if (entry.getValue().equals(time)) {  //si la valeur est egal au temps
-                            foundKey = entry.getKey();        //la clé est trouvé
-                            break; // Sortir de la boucle une fois que la clé est trouvée
-                        }
-                    }
-
-                    Player target = Bukkit.getPlayer(foundKey);
-                    target.sendMessage("ça marche 2");
-
-                }*/
+                }
             }
 
         }

@@ -18,6 +18,7 @@ public class PlayerListener implements Listener {
     @EventHandler
     public void onTalk(AsyncPlayerChatEvent event){
         Player player = event.getPlayer();
+        String playername = player.getName();
 
         if (main.getConfig().getString("Player-Info") == null) return;
 
@@ -27,6 +28,13 @@ public class PlayerListener implements Listener {
 
         //si le plugin est activé
         if (main.getConfig().getBoolean("Enable-plugin")){
+
+            if (main.mutedPlayer.containsKey(playername)){
+                player.sendMessage("You are mute");
+                event.setCancelled(true);
+                return;
+            }
+
             event.setCancelled(true);
 
             //si le joueur a la perm de parler avec le chatcolor

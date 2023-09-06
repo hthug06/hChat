@@ -4,5 +4,11 @@
     "name": "ht06",
     "level": 4,
     "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "fc0f655b-999d-485b-aa5d-ff5055846f0e",
+    "name": "dtblocker2",
+    "level": 4,
+    "bypassesPlayerLimit": false
   }
 ]
