@@ -1,5 +1,5 @@
 name: hChat
-version: '2.0'
+version: '2.1'
 main: fr.ht06.hchat.HChat
 api-version: '1.20'
 author: ht06
@@ -16,3 +16,6 @@ commands:
     aliases:
       - hcreload
       - hcrl
+
+  mute:
+    description: Mute the player

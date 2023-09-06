@@ -1,13 +1,19 @@
 package fr.ht06.hchat;
 
 import fr.ht06.hchat.Commands.colorCodeCommand;
+import fr.ht06.hchat.Commands.muteCommand;
 import fr.ht06.hchat.Listeners.PlayerListener;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public final class HChat extends JavaPlugin {
+
+    public Map<String, Integer> mutedPlayer = new HashMap<>();
 
     @Override
     public void onEnable() {
@@ -15,6 +21,7 @@ public final class HChat extends JavaPlugin {
         getCommand("hChat").setExecutor(this);
         getCommand("colorcode").setExecutor(new colorCodeCommand(this));
         getCommand("hChatreload").setExecutor(this);
+        getCommand("mute").setExecutor(new muteCommand(this));
         getServer().getPluginManager().registerEvents(new PlayerListener(this),this); // this cible l'objet
 
 

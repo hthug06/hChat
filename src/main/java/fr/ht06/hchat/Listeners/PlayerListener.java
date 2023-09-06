@@ -6,7 +6,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerChatEvent;
+import org.bukkit.event.player.AsyncPlayerChatEvent;
 
 public class PlayerListener implements Listener {
 
@@ -16,7 +16,7 @@ public class PlayerListener implements Listener {
     }
 
     @EventHandler
-    public void onTalk(PlayerChatEvent event){
+    public void onTalk(AsyncPlayerChatEvent event){
         Player player = event.getPlayer();
 
         if (main.getConfig().getString("Player-Info") == null) return;
@@ -59,4 +59,10 @@ public class PlayerListener implements Listener {
         }
 
     }
+
+
+    public void onMute(AsyncPlayerChatEvent event){
+        Player player = event.getPlayer();
+    }
+
 }

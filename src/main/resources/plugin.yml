@@ -16,3 +16,6 @@ commands:
     aliases:
       - hcreload
       - hcrl
+
+  mute:
+    description: Mute the player
